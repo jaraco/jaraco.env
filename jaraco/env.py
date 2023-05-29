@@ -5,6 +5,9 @@ class Check:
     """
     Check if an environment variable meets a certain expectation.
 
+    See https://github.com/jaraco/pip-run/blob/7688eae0f6e2437ad233eafcf6c807923065bf18/pip_run/commands.py#L79
+    for example usage.
+
     >>> setenv = getfixture('monkeypatch').setenv
     >>> check = Check('SOME_VAR', expect='setting1')
     >>> bool(check)
