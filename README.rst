@@ -16,3 +16,12 @@
 
 .. image:: https://img.shields.io/badge/skeleton-2023-informational
    :target: https://blog.jaraco.com/skeleton
+
+
+This library facilitates handling of environment variables.
+
+
+Check
+=====
+
+Use ``Check`` to act as a boolean gate on an environment variable.
