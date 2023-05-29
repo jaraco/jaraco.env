@@ -7,7 +7,7 @@ Welcome to |project| documentation!
    history
 
 
-.. automodule:: PROJECT
+.. automodule:: jaraco.env
     :members:
     :undoc-members:
     :show-inheritance:
