@@ -1,4 +1,7 @@
+from __future__ import annotations
+
 import os
+from collections.abc import Mapping
 
 
 class Check:
@@ -27,11 +30,18 @@ class Check:
     False
     """
 
-    def __init__(self, key, expect, *, default=None, _lookup=os.environ):
+    def __init__(
+        self,
+        key: str,
+        expect: str,
+        *,
+        default: str | None = None,
+        _lookup: Mapping[str, str] = os.environ,
+    ) -> None:
         self.key = key
         self.expect = expect
         self.default = default
         self.lookup = _lookup
 
-    def __bool__(self):
+    def __bool__(self) -> bool:
         return self.lookup.get(self.key, self.default) == self.expect
